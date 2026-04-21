@@ -15,10 +15,6 @@ public class StaticArrays<T> {
         this.size = 0;
     }
 
-    public boolean isFull() {
-        return size == capacity;
-    }
-
     // 1. Add element at the end
     public void add(T element) {
         if (isFull()) {
@@ -85,6 +81,44 @@ public class StaticArrays<T> {
         return removeElement;
     }
 
+    // 6. Find index of element (-1 if not found)
+    public int indexOf(T element) {
+
+        for (int i = 0; i < size; i++) {
+            if (data[i].equals(element)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    // 7. Check if contains element
+    public boolean contains(T element) {
+        return indexOf(element) != -1;
+    }
+
+    // 8. Get current size
+    public int size() {
+        return size;
+    }
+
+    // 9. Get maximum capacity
+    public int capacity() {
+        return capacity;
+    }
+
+    // 10. Check if empty
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    // 11. Check if full
+    public boolean isFull() {
+        return size == capacity;
+    }
+
+    // 12. Clear the array
     public void clear() {
         for (int i = 0; i < size; i++) {
             data[i] = null;

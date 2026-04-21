@@ -93,6 +93,20 @@ public class StaticArrays<T> {
         return -1;
     }
 
+    // 13. Reverse the array in-place
+    public void reverse() {
+        int left = 0;
+        int right = size - 1;
+        while (left < right) {
+            T temp = data[left];
+            data[left] = data[right];
+            data[right] = temp;
+            left++;
+            right--;
+        }
+
+    }
+
     // 7. Check if contains element
     public boolean contains(T element) {
         return indexOf(element) != -1;

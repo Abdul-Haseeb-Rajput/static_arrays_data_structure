@@ -17,7 +17,9 @@ public class App {
         System.out.println("Contains " + element + " " + arrays.contains(element));
         System.out.println("Size Of Static Array is " + arrays.size()); // size means current length
         System.out.println("Capacity Of Static Array is " + arrays.capacity()); // capacity means a maximum elements
-                                                                                // static array can hold
+        System.out.println("Reverse Array ");
+        arrays.reverse();
+        arrays.print();
 
         // arrays.clear();
         // arrays.print();

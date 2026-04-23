@@ -38,9 +38,9 @@ public class StaticArrays<T> {
         for (int i = size; i > index; i--) {
             data[i] = data[i - 1];
         }
-        // [1,2,3,4] // capacity is 5
+        // [1,2,3,4]
         // insertAt index 1
-        // i = 4 , i > 5 , i--
+        // i = 4 , 4 > 1 , i--
         // data[4] = data[4-1] , [1,2,3,4,4]
         // data[3] = data[3-1] , [1,2,3,3,4]
         // data[2] = data[2-1] , [1,2,2,3,4]
